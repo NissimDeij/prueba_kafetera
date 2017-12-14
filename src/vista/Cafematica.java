@@ -698,9 +698,9 @@ public class Cafematica extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 595, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(81, 81, 81))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -709,7 +709,7 @@ public class Cafematica extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Preparar, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 13, Short.MAX_VALUE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(65, 65, 65)
@@ -729,9 +729,9 @@ public class Cafematica extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
                 .addGap(18, 18, 18)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -763,7 +763,10 @@ public class Cafematica extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -997,32 +1000,32 @@ public class Cafematica extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JRadioButton CAzucar;
-    private javax.swing.JRadioButton Capuchino;
-    private javax.swing.JRadioButton EAzucar;
-    private javax.swing.JRadioButton Expresso;
+    public javax.swing.JRadioButton CAzucar;
+    public javax.swing.JRadioButton Capuchino;
+    public javax.swing.JRadioButton EAzucar;
+    public javax.swing.JRadioButton Expresso;
     private javax.swing.ButtonGroup GrupoAzucar;
     private javax.swing.ButtonGroup GrupoBebida;
     private javax.swing.ButtonGroup GrupoLeche;
     private javax.swing.ButtonGroup GrupoSize;
-    private javax.swing.JRadioButton HotChoc;
-    private javax.swing.JRadioButton Latte;
-    private javax.swing.JRadioButton LecheD;
-    private javax.swing.JRadioButton LecheE;
-    private javax.swing.JRadioButton LecheS;
-    private javax.swing.JRadioButton Moka;
-    private javax.swing.JProgressBar PBAzucar;
-    private javax.swing.JProgressBar PBCafe;
-    private javax.swing.JProgressBar PBChoc;
-    private javax.swing.JProgressBar PBLecheD;
-    private javax.swing.JProgressBar PBLecheE;
-    private javax.swing.JProgressBar PBLecheS;
+    public javax.swing.JRadioButton HotChoc;
+    public javax.swing.JRadioButton Latte;
+    public javax.swing.JRadioButton LecheD;
+    public javax.swing.JRadioButton LecheE;
+    public javax.swing.JRadioButton LecheS;
+    public javax.swing.JRadioButton Moka;
+    public javax.swing.JProgressBar PBAzucar;
+    public javax.swing.JProgressBar PBCafe;
+    public javax.swing.JProgressBar PBChoc;
+    public javax.swing.JProgressBar PBLecheD;
+    public javax.swing.JProgressBar PBLecheE;
+    public javax.swing.JProgressBar PBLecheS;
     public javax.swing.JToggleButton Preparar;
-    private javax.swing.JRadioButton SAzucar;
+    public javax.swing.JRadioButton SAzucar;
     private javax.swing.JLabel SeleccionLbl;
-    private javax.swing.JRadioButton SizeL;
-    private javax.swing.JRadioButton SizeM;
-    private javax.swing.JRadioButton SizeS;
+    public javax.swing.JRadioButton SizeL;
+    public javax.swing.JRadioButton SizeM;
+    public javax.swing.JRadioButton SizeS;
     public javax.swing.JButton TUAzucar;
     public javax.swing.JButton TUCafe;
     public javax.swing.JButton TUChoc;
@@ -1051,6 +1054,6 @@ public class Cafematica extends javax.swing.JFrame {
     public javax.swing.JPanel jPanel5;
     public javax.swing.JPanel jPanel6;
     public javax.swing.JPanel jPanel7;
-    private javax.swing.JTextField jTextField1;
+    public javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
