@@ -1017,19 +1017,19 @@ public class Cafematica extends javax.swing.JFrame {
     private javax.swing.JProgressBar PBLecheD;
     private javax.swing.JProgressBar PBLecheE;
     private javax.swing.JProgressBar PBLecheS;
-    private javax.swing.JToggleButton Preparar;
+    public javax.swing.JToggleButton Preparar;
     private javax.swing.JRadioButton SAzucar;
     private javax.swing.JLabel SeleccionLbl;
     private javax.swing.JRadioButton SizeL;
     private javax.swing.JRadioButton SizeM;
     private javax.swing.JRadioButton SizeS;
-    private javax.swing.JButton TUAzucar;
-    private javax.swing.JButton TUCafe;
-    private javax.swing.JButton TUChoc;
-    private javax.swing.JButton TULecheD;
-    private javax.swing.JButton TULecheE;
-    private javax.swing.JButton TULecheS;
-    private javax.swing.JLabel jLabel1;
+    public javax.swing.JButton TUAzucar;
+    public javax.swing.JButton TUCafe;
+    public javax.swing.JButton TUChoc;
+    public javax.swing.JButton TULecheD;
+    public javax.swing.JButton TULecheE;
+    public javax.swing.JButton TULecheS;
+    public javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -1045,12 +1045,12 @@ public class Cafematica extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
+    public javax.swing.JPanel jPanel2;
+    public javax.swing.JPanel jPanel3;
+    public javax.swing.JPanel jPanel4;
+    public javax.swing.JPanel jPanel5;
+    public javax.swing.JPanel jPanel6;
+    public javax.swing.JPanel jPanel7;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
