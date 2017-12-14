@@ -18,6 +18,7 @@ public class Coffee {
         //para testear versionamiento de cafetera
         // TODO code application logic here
         //hola
+        int x=10;
     }
     
 }
