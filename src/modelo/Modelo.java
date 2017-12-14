@@ -9,6 +9,6 @@ package modelo;
  *
  * @author Duoc UC
  */
-public class Menu {
+public class Modelo {
     
 }
