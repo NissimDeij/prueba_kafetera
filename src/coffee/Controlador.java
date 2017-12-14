@@ -10,5 +10,5 @@ package coffee;
  * @author Duoc UC
  */
 public class Controlador {
-    
+    int i =80;
 }
