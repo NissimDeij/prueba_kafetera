@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package coffee;
+package modelo;
 
 /**
  *
  * @author Duoc UC
  */
-public class Controlador {
-    int i =80;
+public class Menu {
+    
 }
