@@ -73,13 +73,13 @@ public class Cafematica extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
-        Preparar = new javax.swing.JToggleButton();
+        btnPreparar = new javax.swing.JToggleButton();
         jPanel6 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
+        txtValor = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         SeleccionLbl = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        txtVuelto = new javax.swing.JTextField();
         jPanel7 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         SizeM = new javax.swing.JRadioButton();
@@ -498,26 +498,25 @@ public class Cafematica extends javax.swing.JFrame {
                                     .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
         );
 
-        Preparar.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 18)); // NOI18N
-        Preparar.setForeground(new java.awt.Color(0, 102, 51));
-        Preparar.setText("<html>PREPARAR<BR>SELECCIÓN</html>");
-        Preparar.setActionCommand("");
-        Preparar.addActionListener(new java.awt.event.ActionListener() {
+        btnPreparar.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 18)); // NOI18N
+        btnPreparar.setForeground(new java.awt.Color(0, 102, 51));
+        btnPreparar.setText("<html>PREPARAR<BR>SELECCIÓN</html>");
+        btnPreparar.setActionCommand("");
+        btnPreparar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                PrepararActionPerformed(evt);
+                btnPrepararActionPerformed(evt);
             }
         });
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 255));
         jPanel6.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jTextField1.setEditable(false);
-        jTextField1.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField1.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 24)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(255, 0, 0));
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField1.setText("$1,200");
-        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtValor.setEditable(false);
+        txtValor.setBackground(new java.awt.Color(255, 255, 255));
+        txtValor.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 24)); // NOI18N
+        txtValor.setForeground(new java.awt.Color(255, 0, 0));
+        txtValor.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtValor.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel7.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 0, 0));
@@ -530,13 +529,12 @@ public class Cafematica extends javax.swing.JFrame {
         jLabel16.setForeground(new java.awt.Color(255, 0, 0));
         jLabel16.setText("Vuelto");
 
-        jTextField2.setEditable(false);
-        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField2.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 24)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(255, 0, 0));
-        jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField2.setText("$1,200");
-        jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtVuelto.setEditable(false);
+        txtVuelto.setBackground(new java.awt.Color(255, 255, 255));
+        txtVuelto.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 24)); // NOI18N
+        txtVuelto.setForeground(new java.awt.Color(255, 0, 0));
+        txtVuelto.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        txtVuelto.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -548,9 +546,9 @@ public class Cafematica extends javax.swing.JFrame {
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtValor, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(txtVuelto, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(SeleccionLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -566,11 +564,11 @@ public class Cafematica extends javax.swing.JFrame {
                         .addComponent(SeleccionLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(186, 186, 186))
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtValor, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(98, 98, 98)
                         .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(26, 26, 26)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(txtVuelto, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(56, Short.MAX_VALUE))))
         );
 
@@ -711,7 +709,7 @@ public class Cafematica extends javax.swing.JFrame {
                                 .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(107, 107, 107)
-                                .addComponent(Preparar, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(btnPreparar, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -746,7 +744,7 @@ public class Cafematica extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
-                        .addComponent(Preparar, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnPreparar, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
@@ -773,9 +771,9 @@ public class Cafematica extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_EAzucarActionPerformed
 
-    private void PrepararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrepararActionPerformed
+    private void btnPrepararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrepararActionPerformed
         
-    }//GEN-LAST:event_PrepararActionPerformed
+    }//GEN-LAST:event_btnPrepararActionPerformed
 
     private void ExpressoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExpressoMouseClicked
        
@@ -908,7 +906,6 @@ public class Cafematica extends javax.swing.JFrame {
     public javax.swing.JProgressBar PBLecheD;
     public javax.swing.JProgressBar PBLecheE;
     public javax.swing.JProgressBar PBLecheS;
-    public javax.swing.JToggleButton Preparar;
     public javax.swing.JRadioButton SAzucar;
     private javax.swing.JLabel SeleccionLbl;
     public javax.swing.JRadioButton SizeL;
@@ -922,6 +919,7 @@ public class Cafematica extends javax.swing.JFrame {
     public javax.swing.JButton btn50;
     public javax.swing.JButton btn500;
     public javax.swing.JButton btn5000;
+    public javax.swing.JToggleButton btnPreparar;
     public javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -945,7 +943,7 @@ public class Cafematica extends javax.swing.JFrame {
     public javax.swing.JPanel jPanel5;
     public javax.swing.JPanel jPanel6;
     public javax.swing.JPanel jPanel7;
-    public javax.swing.JTextField jTextField1;
-    public javax.swing.JTextField jTextField2;
+    public javax.swing.JTextField txtValor;
+    public javax.swing.JTextField txtVuelto;
     // End of variables declaration//GEN-END:variables
 }
