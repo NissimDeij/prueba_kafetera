@@ -1,7 +1,156 @@
 
 package controlador;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import vista.Cafematica;
+import modelo.Modelo;
 
-public class Maquina {
+
+public class Maquina implements ActionListener,MouseListener {
+    //vista
+    private Cafematica vistaPrincipal ;
+   
+    //modelo
+    private Modelo modelo = new Modelo();
+   /** Constructores  de clase */
+    public Maquina(){
+        
+    }
+    
+    public Maquina( JFrame padre ){
+        this.vistaPrincipal = (Cafematica) padre;
+    }
+    
+     //acciones que se ejecuta por los controles de cada VISTA
+    public enum Accion{
+        //Declara controles que se usaran
+        //Radiobutton de tipo de producto
+        Expresso,
+        Latte,
+        Capuchino,
+        Moka,
+        HotChoc,
+        //Radiobutton de tipo de tamaño
+        SizeS,
+        SizeM,
+        SizeL,
+        //Radiobutton de tipo de Leche
+        LecheE,
+        LecheD,
+        LecheS,
+        //Radiobutton de tipo de Azucar
+        SAzucar,
+        CAzucar,
+        EAzucar
+    }
+    
+    /** Inicia todos las acciones y listener de la vista */
+    public void iniciar(){
+        try {
+            UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
+            SwingUtilities.updateComponentTreeUI(vistaPrincipal);
+            //SwingUtilities.updateComponentTreeUI( this.listProd );
+            //SwingUtilities.updateComponentTreeUI( this.modProd );
+            this.vistaPrincipal.setLocationRelativeTo(null);
+            this.vistaPrincipal.setTitle("Dunkan Hill coffee");
+            this.vistaPrincipal.setVisible(true);
+        } catch (UnsupportedLookAndFeelException ex) {}
+          catch (ClassNotFoundException ex) {}
+          catch (InstantiationException ex) {}
+          catch (IllegalAccessException ex) {}
+
+        //============Escuchamos radiobutton de opciones de producto
+        //Cafe Expresso
+        this.vistaPrincipal.Expresso.setActionCommand( "Expresso" );
+        this.vistaPrincipal.Expresso.addActionListener(this);
+        //Cafe con leche
+        this.vistaPrincipal.Latte.setActionCommand( "Latte" );
+        this.vistaPrincipal.Latte.addActionListener(this);
+        //Capuchino
+        this.vistaPrincipal.Capuchino.setActionCommand("Capuchino");
+        this.vistaPrincipal.Capuchino.addActionListener(this);
+        //Mocka
+        this.vistaPrincipal.Moka.setActionCommand("Moka");
+        this.vistaPrincipal.Moka.addActionListener(this);
+        //Chocolate Caliente
+        this.vistaPrincipal.HotChoc.setActionCommand("HotChoc");
+        this.vistaPrincipal.HotChoc.addActionListener(this);
+        
+        //Escuhamos radiobutton de opciones de Tamaño
+        //pequeño
+        this.vistaPrincipal.SizeS.setActionCommand("SizeS");
+        this.vistaPrincipal.SizeS.addActionListener(this);
+        //mediano
+        this.vistaPrincipal.SizeM.setActionCommand("SizeM");
+        this.vistaPrincipal.SizeM.addActionListener(this);
+        //Grande
+        this.vistaPrincipal.SizeL.setActionCommand("SizeL");
+        this.vistaPrincipal.SizeL.addActionListener(this);
+        
+        
+        //Escuchamos radiobutton de tipo de leche
+        this.vistaPrincipal.LecheE.setActionCommand("LecheE");
+        this.vistaPrincipal.LecheE.addActionListener(this);
+        
+        this.vistaPrincipal.LecheD.setActionCommand("LecheD");
+        this.vistaPrincipal.LecheD.addActionListener(this);
+        
+        this.vistaPrincipal.LecheS.setActionCommand("LecheS");
+        this.vistaPrincipal.LecheS.addActionListener(this);
+        
+        //Escuchamos radiobbuton de tipo de azucar
+        this.vistaPrincipal.SAzucar.setActionCommand("SAzucar");
+        this.vistaPrincipal.SAzucar.addActionListener(this);
+        
+        this.vistaPrincipal.CAzucar.setActionCommand("CAzucar");
+        this.vistaPrincipal.CAzucar.addActionListener(this);
+        
+        this.vistaPrincipal.EAzucar.setActionCommand("EAzucar");
+        this.vistaPrincipal.EAzucar.addActionListener(this);
+
+
+    }
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+}
+/*public class Maquina {
         //Capacidades máximas de máquina
     public static final int maxCafe = 1000;        // Gramos
     public static final double maxLecheEnte = 10;  // Litros
@@ -118,3 +267,4 @@ public class Maquina {
         return stockIng;
     }
 }
+*/
