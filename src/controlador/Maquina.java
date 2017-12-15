@@ -69,9 +69,7 @@ public class Maquina implements ActionListener,MouseListener {
     public void iniciar(){
         try {
             UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
-            SwingUtilities.updateComponentTreeUI(vistaPrincipal);
-            //SwingUtilities.updateComponentTreeUI( this.listProd );
-            //SwingUtilities.updateComponentTreeUI( this.modProd );
+            SwingUtilities.updateComponentTreeUI(vistaPrincipal);            
             this.vistaPrincipal.setLocationRelativeTo(null);
             this.vistaPrincipal.setTitle("Dunkan Hill coffee");
             this.vistaPrincipal.setVisible(true);
