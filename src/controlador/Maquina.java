@@ -44,7 +44,8 @@ public class Maquina implements ActionListener,MouseListener {
         SizeM,
         SizeL,
         //Radiobutton de tipo de Leche
-        LecheE,
+        rdbSLeche,
+        LecheE1,
         LecheD,
         LecheS,
         //Radiobutton de tipo de Azucar
@@ -109,8 +110,12 @@ public class Maquina implements ActionListener,MouseListener {
         
         
         //Escuchamos radiobutton de tipo de leche
-        this.vistaPrincipal.LecheE.setActionCommand("LecheE");
-        this.vistaPrincipal.LecheE.addActionListener(this);
+        
+        this.vistaPrincipal.rdbSLeche.setActionCommand("rdbSLeche");
+        this.vistaPrincipal.rdbSLeche.addActionListener(this);
+        
+        this.vistaPrincipal.LecheE1.setActionCommand("LecheE1");
+        this.vistaPrincipal.LecheE1.addActionListener(this);
         
         this.vistaPrincipal.LecheD.setActionCommand("LecheD");
         this.vistaPrincipal.LecheD.addActionListener(this);
@@ -167,6 +172,7 @@ public class Maquina implements ActionListener,MouseListener {
     }
     
       int monto=0;
+      int ValFinal = 0;
     @Override
     public void actionPerformed(ActionEvent e) {
       
@@ -212,8 +218,13 @@ public class Maquina implements ActionListener,MouseListener {
                     JOptionPane.showMessageDialog(null,"Debe ingresar más dinero para adquirir el producto");
                 }
                 else {
-                    this.vistaPrincipal.txtValor.setText("$900");
-                    this.vistaPrincipal.txtVuelto.setText("$"+Integer.toString(Integer.parseInt(this.vistaPrincipal.txtImporte.getText())-900));
+                    this.vistaPrincipal.rdbSLeche.setSelected(true);
+                    this.vistaPrincipal.SizeS.setSelected(true);
+                    this.vistaPrincipal.SAzucar.setSelected(true);
+                    ValFinal = ValFinal +900;
+                    this.vistaPrincipal.txtValor.setText(Integer.toString(ValFinal));
+                    this.vistaPrincipal.txtVuelto.setText("$"+Integer.toString(Integer.parseInt(this.vistaPrincipal.txtImporte.getText())-ValFinal));
+                    this.vistaPrincipal.Expresso.setEnabled(false);
                     this.vistaPrincipal.btnPreparar.setEnabled(true);
                 }
                 break;
@@ -226,8 +237,12 @@ public class Maquina implements ActionListener,MouseListener {
                     JOptionPane.showMessageDialog(null,"Debe ingresar más dinero para adquirir el producto");
                 }
                 else{
-                    this.vistaPrincipal.txtValor.setText("$1300");
-                    this.vistaPrincipal.txtVuelto.setText("$"+Integer.toString(Integer.parseInt(this.vistaPrincipal.txtImporte.getText())-1300));
+                    this.vistaPrincipal.LecheE1.setSelected(true);
+                    this.vistaPrincipal.SizeS.setSelected(true);
+                    this.vistaPrincipal.SAzucar.setSelected(true);
+                    ValFinal = ValFinal +1300;
+                    this.vistaPrincipal.txtValor.setText(Integer.toString(ValFinal));
+                    this.vistaPrincipal.txtVuelto.setText("$"+Integer.toString(Integer.parseInt(this.vistaPrincipal.txtImporte.getText())-ValFinal));
                     this.vistaPrincipal.btnPreparar.setEnabled(true);
                 }
                 break;
@@ -240,8 +255,12 @@ public class Maquina implements ActionListener,MouseListener {
                     JOptionPane.showMessageDialog(null,"Debe ingresar más dinero para adquirir el producto");
                 }
                 else{
-                    this.vistaPrincipal.txtValor.setText("$1000");
-                    this.vistaPrincipal.txtVuelto.setText("$"+Integer.toString(Integer.parseInt(this.vistaPrincipal.txtImporte.getText())-1000));
+                    this.vistaPrincipal.LecheE1.setSelected(true);
+                    this.vistaPrincipal.SizeS.setSelected(true);
+                    this.vistaPrincipal.SAzucar.setSelected(true);
+                    ValFinal = ValFinal +1000;
+                    this.vistaPrincipal.txtValor.setText(Integer.toString(ValFinal));
+                    this.vistaPrincipal.txtVuelto.setText("$"+Integer.toString(Integer.parseInt(this.vistaPrincipal.txtImporte.getText())-ValFinal));
                     this.vistaPrincipal.btnPreparar.setEnabled(true);
                 }
                 break;
@@ -254,8 +273,12 @@ public class Maquina implements ActionListener,MouseListener {
                     JOptionPane.showMessageDialog(null,"Debe ingresar más dinero para adquirir el producto");
                 }
                 else{
-                    this.vistaPrincipal.txtValor.setText("$1500");
-                    this.vistaPrincipal.txtVuelto.setText("$"+Integer.toString(Integer.parseInt(this.vistaPrincipal.txtImporte.getText())-1500));
+                    this.vistaPrincipal.rdbSLeche.setSelected(true);
+                    this.vistaPrincipal.SizeS.setSelected(true);
+                    this.vistaPrincipal.SAzucar.setSelected(true);
+                    ValFinal = ValFinal +1500;
+                    this.vistaPrincipal.txtValor.setText(Integer.toString(ValFinal));
+                    this.vistaPrincipal.txtVuelto.setText("$"+Integer.toString(Integer.parseInt(this.vistaPrincipal.txtImporte.getText())-ValFinal));
                     this.vistaPrincipal.btnPreparar.setEnabled(true);
                 }
                 break;
@@ -269,10 +292,69 @@ public class Maquina implements ActionListener,MouseListener {
                 }
                 
                 else{
-                    this.vistaPrincipal.txtValor.setText("$800");
+                    this.vistaPrincipal.rdbSLeche.setSelected(true);
+                    this.vistaPrincipal.SizeS.setSelected(true);
+                    this.vistaPrincipal.SAzucar.setSelected(true);
+                    ValFinal = ValFinal +800;
+                    this.vistaPrincipal.txtValor.setText(Integer.toString(ValFinal));
                     this.vistaPrincipal.txtVuelto.setText("$"+Integer.toString(Integer.parseInt(this.vistaPrincipal.txtImporte.getText())-800));
                     this.vistaPrincipal.btnPreparar.setEnabled(true);
                 }
+                break;
+            case SizeS:
+                 ValFinal = ValFinal + 0;
+                 this.vistaPrincipal.txtValor.setText(Integer.toString(ValFinal));
+                 this.vistaPrincipal.SizeS.setEnabled(false);
+                 this.vistaPrincipal.SizeM.setEnabled(true);
+                 this.vistaPrincipal.SizeL.setEnabled(true);
+                 this.vistaPrincipal.txtVuelto.setText("$"+Integer.toString(Integer.parseInt(this.vistaPrincipal.txtImporte.getText())-ValFinal));
+                 break;
+                
+            case SizeM:
+                ValFinal = ValFinal +100;
+                this.vistaPrincipal.txtValor.setText(Integer.toString(ValFinal));
+                this.vistaPrincipal.SizeS.setEnabled(true);
+                 this.vistaPrincipal.SizeM.setEnabled(false);
+                 this.vistaPrincipal.SizeL.setEnabled(true);
+                 this.vistaPrincipal.txtVuelto.setText("$"+Integer.toString(Integer.parseInt(this.vistaPrincipal.txtImporte.getText())-ValFinal));
+                 ValFinal = 0;
+                 break;
+                 
+            case SizeL:
+                ValFinal = ValFinal +150;
+                this.vistaPrincipal.txtValor.setText(Integer.toString(ValFinal));
+                this.vistaPrincipal.SizeS.setEnabled(true);
+                 this.vistaPrincipal.SizeM.setEnabled(true);
+                 this.vistaPrincipal.SizeL.setEnabled(false);
+                 this.vistaPrincipal.txtVuelto.setText("$"+Integer.toString(Integer.parseInt(this.vistaPrincipal.txtImporte.getText())-ValFinal));
+                 break;
+            case rdbSLeche:
+                ValFinal = ValFinal +0;
+                this.vistaPrincipal.txtValor.setText(Integer.toString(ValFinal));
+                break;
+            case LecheE1:
+                ValFinal = ValFinal +100;
+                this.vistaPrincipal.txtValor.setText(Integer.toString(ValFinal));
+                break;
+            case LecheD:
+                ValFinal = ValFinal +200;
+                this.vistaPrincipal.txtValor.setText(Integer.toString(ValFinal));
+                break;
+            case LecheS:
+                ValFinal = ValFinal +500;
+                this.vistaPrincipal.txtValor.setText(Integer.toString(ValFinal));
+                break;
+            case SAzucar:
+                ValFinal = ValFinal +0;
+                this.vistaPrincipal.txtValor.setText(Integer.toString(ValFinal));
+                break;
+            case CAzucar:
+                ValFinal = ValFinal +50;
+                this.vistaPrincipal.txtValor.setText(Integer.toString(ValFinal));
+                break;
+            case EAzucar:
+                ValFinal = ValFinal +100;
+                this.vistaPrincipal.txtValor.setText(Integer.toString(ValFinal));
                 break;
        }
     }

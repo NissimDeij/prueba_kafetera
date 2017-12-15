@@ -25,6 +25,8 @@ public class Cafematica extends javax.swing.JFrame {
         initComponents();
         btnPreparar.setEnabled(false);
         txtImporte.setEnabled(false);
+        txtValor.setEnabled(false);
+        txtVuelto.setEnabled(false);
     }
 
     /**
@@ -52,8 +54,9 @@ public class Cafematica extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         LecheD = new javax.swing.JRadioButton();
-        LecheE = new javax.swing.JRadioButton();
+        rdbSLeche = new javax.swing.JRadioButton();
         LecheS = new javax.swing.JRadioButton();
+        LecheE1 = new javax.swing.JRadioButton();
         jPanel4 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         CAzucar = new javax.swing.JRadioButton();
@@ -119,9 +122,9 @@ public class Cafematica extends javax.swing.JFrame {
         Expresso.setBackground(new java.awt.Color(255, 255, 255));
         GrupoBebida.add(Expresso);
         Expresso.setFont(new java.awt.Font("Microsoft Tai Le", 1, 18)); // NOI18N
+        Expresso.setText("Expreso $900");
         Expresso.setToolTipText("");
         Expresso.setActionCommand("1");
-        Expresso.setLabel("Expreso");
         Expresso.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ExpressoMouseClicked(evt);
@@ -136,7 +139,7 @@ public class Cafematica extends javax.swing.JFrame {
         Latte.setBackground(new java.awt.Color(255, 255, 255));
         GrupoBebida.add(Latte);
         Latte.setFont(new java.awt.Font("Microsoft Tai Le", 1, 18)); // NOI18N
-        Latte.setText("Latte");
+        Latte.setText("Latte $1300");
         Latte.setActionCommand("2");
         Latte.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -152,7 +155,7 @@ public class Cafematica extends javax.swing.JFrame {
         Capuchino.setBackground(new java.awt.Color(255, 255, 255));
         GrupoBebida.add(Capuchino);
         Capuchino.setFont(new java.awt.Font("Microsoft Tai Le", 1, 18)); // NOI18N
-        Capuchino.setText("Capuchino");
+        Capuchino.setText("Capuchino $1000");
         Capuchino.setActionCommand("3");
         Capuchino.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -163,7 +166,7 @@ public class Cafematica extends javax.swing.JFrame {
         Moka.setBackground(new java.awt.Color(255, 255, 255));
         GrupoBebida.add(Moka);
         Moka.setFont(new java.awt.Font("Microsoft Tai Le", 1, 18)); // NOI18N
-        Moka.setText("Moka");
+        Moka.setText("Moka $1500");
         Moka.setActionCommand("4");
         Moka.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -175,7 +178,7 @@ public class Cafematica extends javax.swing.JFrame {
         GrupoBebida.add(HotChoc);
         HotChoc.setFont(new java.awt.Font("Microsoft Tai Le", 1, 18)); // NOI18N
         HotChoc.setForeground(new java.awt.Color(255, 0, 51));
-        HotChoc.setText("Chocolate Caliente");
+        HotChoc.setText("Chocolate Caliente $800");
         HotChoc.setActionCommand("5");
         HotChoc.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -196,7 +199,7 @@ public class Cafematica extends javax.swing.JFrame {
                     .addComponent(Latte)
                     .addComponent(Expresso)
                     .addComponent(jLabel2))
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -225,7 +228,7 @@ public class Cafematica extends javax.swing.JFrame {
         LecheD.setBackground(new java.awt.Color(255, 255, 255));
         GrupoLeche.add(LecheD);
         LecheD.setFont(new java.awt.Font("Microsoft Tai Le", 1, 16)); // NOI18N
-        LecheD.setText("Descremada");
+        LecheD.setText("Descremada (+$200)");
         LecheD.setActionCommand("2");
         LecheD.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -233,25 +236,36 @@ public class Cafematica extends javax.swing.JFrame {
             }
         });
 
-        LecheE.setBackground(new java.awt.Color(255, 255, 255));
-        GrupoLeche.add(LecheE);
-        LecheE.setFont(new java.awt.Font("Microsoft Tai Le", 1, 16)); // NOI18N
-        LecheE.setText("Entera");
-        LecheE.setActionCommand("1");
-        LecheE.addMouseListener(new java.awt.event.MouseAdapter() {
+        rdbSLeche.setBackground(new java.awt.Color(255, 255, 255));
+        GrupoLeche.add(rdbSLeche);
+        rdbSLeche.setFont(new java.awt.Font("Microsoft Tai Le", 1, 16)); // NOI18N
+        rdbSLeche.setText("Sin Leche (+$0)");
+        rdbSLeche.setActionCommand("1");
+        rdbSLeche.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                LecheEMouseClicked(evt);
+                rdbSLecheMouseClicked(evt);
             }
         });
 
         LecheS.setBackground(new java.awt.Color(255, 255, 255));
         GrupoLeche.add(LecheS);
         LecheS.setFont(new java.awt.Font("Microsoft Tai Le", 1, 16)); // NOI18N
-        LecheS.setText("Soya");
+        LecheS.setText("Soya (+$500)");
         LecheS.setActionCommand("3");
         LecheS.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 LecheSMouseClicked(evt);
+            }
+        });
+
+        LecheE1.setBackground(new java.awt.Color(255, 255, 255));
+        GrupoLeche.add(LecheE1);
+        LecheE1.setFont(new java.awt.Font("Microsoft Tai Le", 1, 16)); // NOI18N
+        LecheE1.setText("Entera (+$100)");
+        LecheE1.setActionCommand("1");
+        LecheE1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LecheE1MouseClicked(evt);
             }
         });
 
@@ -262,14 +276,21 @@ public class Cafematica extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(LecheE)
-                        .addGap(68, 68, 68)
+                        .addComponent(jLabel3)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(rdbSLeche)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(LecheE1)
+                        .addGap(18, 18, 18)
                         .addComponent(LecheD)
-                        .addGap(36, 36, 36)
-                        .addComponent(LecheS)))
-                .addContainerGap(62, Short.MAX_VALUE))
+                        .addGap(102, 102, 102))))
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(181, 181, 181)
+                .addComponent(LecheS)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -278,10 +299,11 @@ public class Cafematica extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addGap(7, 7, 7)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LecheE, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(rdbSLeche, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(LecheD, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LecheS, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(LecheE1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(LecheS, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
@@ -293,7 +315,7 @@ public class Cafematica extends javax.swing.JFrame {
         CAzucar.setBackground(new java.awt.Color(255, 255, 255));
         GrupoAzucar.add(CAzucar);
         CAzucar.setFont(new java.awt.Font("Microsoft Tai Le", 1, 16)); // NOI18N
-        CAzucar.setText("Con azucar");
+        CAzucar.setText("Con azucar (+$50)");
         CAzucar.setActionCommand("1");
         CAzucar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -304,7 +326,7 @@ public class Cafematica extends javax.swing.JFrame {
         SAzucar.setBackground(new java.awt.Color(255, 255, 255));
         GrupoAzucar.add(SAzucar);
         SAzucar.setFont(new java.awt.Font("Microsoft Tai Le", 1, 16)); // NOI18N
-        SAzucar.setText("Sin azucar");
+        SAzucar.setText("Sin azucar (+$0)");
         SAzucar.setActionCommand("0");
         SAzucar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -315,7 +337,7 @@ public class Cafematica extends javax.swing.JFrame {
         EAzucar.setBackground(new java.awt.Color(255, 255, 255));
         GrupoAzucar.add(EAzucar);
         EAzucar.setFont(new java.awt.Font("Microsoft Tai Le", 1, 16)); // NOI18N
-        EAzucar.setText("Extra azucar");
+        EAzucar.setText("Extra azucar (+$100)");
         EAzucar.setActionCommand("2");
         EAzucar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -586,7 +608,7 @@ public class Cafematica extends javax.swing.JFrame {
         SizeM.setBackground(new java.awt.Color(255, 255, 255));
         GrupoSize.add(SizeM);
         SizeM.setFont(new java.awt.Font("Microsoft Tai Le", 1, 16)); // NOI18N
-        SizeM.setText("Mediano");
+        SizeM.setText("Mediano (+$100)");
         SizeM.setActionCommand("2");
         SizeM.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -597,7 +619,7 @@ public class Cafematica extends javax.swing.JFrame {
         SizeS.setBackground(new java.awt.Color(255, 255, 255));
         GrupoSize.add(SizeS);
         SizeS.setFont(new java.awt.Font("Microsoft Tai Le", 1, 16)); // NOI18N
-        SizeS.setText("Pequeño");
+        SizeS.setText("Pequeño (+$0)");
         SizeS.setActionCommand("1");
         SizeS.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -613,7 +635,7 @@ public class Cafematica extends javax.swing.JFrame {
         SizeL.setBackground(new java.awt.Color(255, 255, 255));
         GrupoSize.add(SizeL);
         SizeL.setFont(new java.awt.Font("Microsoft Tai Le", 1, 16)); // NOI18N
-        SizeL.setText("Grande");
+        SizeL.setText("Grande (+$150)");
         SizeL.setActionCommand("3");
         SizeL.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -766,7 +788,7 @@ public class Cafematica extends javax.swing.JFrame {
                                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -824,9 +846,9 @@ public class Cafematica extends javax.swing.JFrame {
        
     }//GEN-LAST:event_HotChocMouseClicked
 
-    private void LecheEMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LecheEMouseClicked
+    private void rdbSLecheMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_rdbSLecheMouseClicked
        
-    }//GEN-LAST:event_LecheEMouseClicked
+    }//GEN-LAST:event_rdbSLecheMouseClicked
 
     private void LecheDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LecheDMouseClicked
         
@@ -872,6 +894,10 @@ public class Cafematica extends javax.swing.JFrame {
     private void btn50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn50ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn50ActionPerformed
+
+    private void LecheE1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LecheE1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LecheE1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -926,7 +952,7 @@ public class Cafematica extends javax.swing.JFrame {
     public javax.swing.JRadioButton HotChoc;
     public javax.swing.JRadioButton Latte;
     public javax.swing.JRadioButton LecheD;
-    public javax.swing.JRadioButton LecheE;
+    public javax.swing.JRadioButton LecheE1;
     public javax.swing.JRadioButton LecheS;
     public javax.swing.JRadioButton Moka;
     public javax.swing.JProgressBar PBAzucar;
@@ -974,6 +1000,7 @@ public class Cafematica extends javax.swing.JFrame {
     public javax.swing.JPanel jPanel7;
     public javax.swing.JLabel lblImporte1;
     public javax.swing.JLabel lblMoneda;
+    public javax.swing.JRadioButton rdbSLeche;
     public javax.swing.JTextField txtImporte;
     public javax.swing.JTextField txtValor;
     public javax.swing.JTextField txtVuelto;

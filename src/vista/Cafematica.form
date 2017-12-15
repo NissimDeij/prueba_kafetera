@@ -159,7 +159,7 @@
                                   <Component id="jPanel7" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
@@ -226,7 +226,7 @@
                           <Component id="Expresso" min="-2" max="-2" attributes="0"/>
                           <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="10" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -270,9 +270,9 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Microsoft Tai Le" size="18" style="1"/>
                 </Property>
+                <Property name="text" type="java.lang.String" value="Expreso $900"/>
                 <Property name="toolTipText" type="java.lang.String" value=""/>
                 <Property name="actionCommand" type="java.lang.String" value="1"/>
-                <Property name="label" type="java.lang.String" value="Expreso"/>
               </Properties>
               <Events>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="ExpressoMouseClicked"/>
@@ -293,7 +293,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Microsoft Tai Le" size="18" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Latte"/>
+                <Property name="text" type="java.lang.String" value="Latte $1300"/>
                 <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
               <Events>
@@ -315,7 +315,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Microsoft Tai Le" size="18" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Capuchino"/>
+                <Property name="text" type="java.lang.String" value="Capuchino $1000"/>
                 <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
               <Events>
@@ -336,7 +336,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Microsoft Tai Le" size="18" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Moka"/>
+                <Property name="text" type="java.lang.String" value="Moka $1500"/>
                 <Property name="actionCommand" type="java.lang.String" value="4"/>
               </Properties>
               <Events>
@@ -360,7 +360,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="33" green="0" red="ff" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Chocolate Caliente"/>
+                <Property name="text" type="java.lang.String" value="Chocolate Caliente $800"/>
                 <Property name="actionCommand" type="java.lang.String" value="5"/>
               </Properties>
               <Events>
@@ -393,16 +393,25 @@
                   <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="LecheE" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
+                              <Component id="rdbSLeche" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="LecheE1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Component id="LecheD" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                              <Component id="LecheS" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="102" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="62" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="181" max="-2" attributes="0"/>
+                      <Component id="LecheS" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -413,11 +422,12 @@
                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="LecheE" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                          <Component id="rdbSLeche" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                           <Component id="LecheD" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
-                          <Component id="LecheS" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
+                          <Component id="LecheE1" alignment="3" min="-2" pref="36" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
+                      <Component id="LecheS" min="-2" pref="36" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -442,7 +452,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Microsoft Tai Le" size="16" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Descremada"/>
+                <Property name="text" type="java.lang.String" value="Descremada (+$200)"/>
                 <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
               <Events>
@@ -452,7 +462,7 @@
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
               </AuxValues>
             </Component>
-            <Component class="javax.swing.JRadioButton" name="LecheE">
+            <Component class="javax.swing.JRadioButton" name="rdbSLeche">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -463,11 +473,11 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Microsoft Tai Le" size="16" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Entera"/>
+                <Property name="text" type="java.lang.String" value="Sin Leche (+$0)"/>
                 <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
               <Events>
-                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="LecheEMouseClicked"/>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="rdbSLecheMouseClicked"/>
               </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -484,11 +494,32 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Microsoft Tai Le" size="16" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Soya"/>
+                <Property name="text" type="java.lang.String" value="Soya (+$500)"/>
                 <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
               <Events>
                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="LecheSMouseClicked"/>
+              </Events>
+              <AuxValues>
+                <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+              </AuxValues>
+            </Component>
+            <Component class="javax.swing.JRadioButton" name="LecheE1">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+                <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
+                  <ComponentRef name="GrupoLeche"/>
+                </Property>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Microsoft Tai Le" size="16" style="1"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="Entera (+$100)"/>
+                <Property name="actionCommand" type="java.lang.String" value="1"/>
+              </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="LecheE1MouseClicked"/>
               </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -569,7 +600,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Microsoft Tai Le" size="16" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Con azucar"/>
+                <Property name="text" type="java.lang.String" value="Con azucar (+$50)"/>
                 <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
               <Events>
@@ -590,7 +621,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Microsoft Tai Le" size="16" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Sin azucar"/>
+                <Property name="text" type="java.lang.String" value="Sin azucar (+$0)"/>
                 <Property name="actionCommand" type="java.lang.String" value="0"/>
               </Properties>
               <Events>
@@ -611,7 +642,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Microsoft Tai Le" size="16" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Extra azucar"/>
+                <Property name="text" type="java.lang.String" value="Extra azucar (+$100)"/>
                 <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
               <Events>
@@ -1140,7 +1171,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Microsoft Tai Le" size="16" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Mediano"/>
+                <Property name="text" type="java.lang.String" value="Mediano (+$100)"/>
                 <Property name="actionCommand" type="java.lang.String" value="2"/>
               </Properties>
               <Events>
@@ -1161,7 +1192,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Microsoft Tai Le" size="16" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Peque&#xf1;o"/>
+                <Property name="text" type="java.lang.String" value="Peque&#xf1;o (+$0)"/>
                 <Property name="actionCommand" type="java.lang.String" value="1"/>
               </Properties>
               <Events>
@@ -1183,7 +1214,7 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Microsoft Tai Le" size="16" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Grande"/>
+                <Property name="text" type="java.lang.String" value="Grande (+$150)"/>
                 <Property name="actionCommand" type="java.lang.String" value="3"/>
               </Properties>
               <Events>
