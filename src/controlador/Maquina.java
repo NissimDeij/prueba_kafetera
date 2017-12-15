@@ -64,7 +64,11 @@ public class Maquina implements ActionListener,MouseListener {
         //Textbox de monto
         txtValor,
         txtVuelto,
-        txtImporte
+        txtImporte,
+        GrupoLeche,
+        GrupoAzucar,
+        GrupoCafe,
+        GrupoSize
     }
     
     /** Inicia todos las acciones y listener de la vista */
@@ -167,6 +171,11 @@ public class Maquina implements ActionListener,MouseListener {
         
         this.vistaPrincipal.btn20000.setActionCommand("btn20000");
         this.vistaPrincipal.btn20000.addActionListener(this);
+        
+        this.vistaPrincipal.GrupoAzucar.getSelection();
+        this.vistaPrincipal.GrupoBebida.getSelection();
+        this.vistaPrincipal.GrupoLeche.getSelection();
+        this.vistaPrincipal.GrupoSize.getSelection();
 
 
     }
@@ -218,14 +227,17 @@ public class Maquina implements ActionListener,MouseListener {
                     JOptionPane.showMessageDialog(null,"Debe ingresar más dinero para adquirir el producto");
                 }
                 else {
-                    this.vistaPrincipal.rdbSLeche.setSelected(true);
-                    this.vistaPrincipal.SizeS.setSelected(true);
-                    this.vistaPrincipal.SAzucar.setSelected(true);
-                    ValFinal = ValFinal +900;
-                    this.vistaPrincipal.txtValor.setText(Integer.toString(ValFinal));
-                    this.vistaPrincipal.txtVuelto.setText("$"+Integer.toString(Integer.parseInt(this.vistaPrincipal.txtImporte.getText())-ValFinal));
-                    this.vistaPrincipal.Expresso.setEnabled(false);
+                   
                     this.vistaPrincipal.btnPreparar.setEnabled(true);
+                    this.vistaPrincipal.GrupoAzucar.getSelection().getActionCommand();
+                    this.vistaPrincipal.GrupoBebida.getSelection().getActionCommand();
+                    this.vistaPrincipal.GrupoLeche.getSelection().getActionCommand();
+                    this.vistaPrincipal.GrupoSize.getSelection().getActionCommand();
+                    System.out.println(this.vistaPrincipal.GrupoAzucar.getSelection().getActionCommand());
+                    System.out.println(this.vistaPrincipal.GrupoBebida.getSelection().getActionCommand());
+                    System.out.println(this.vistaPrincipal.GrupoLeche.getSelection().getActionCommand());
+                    System.out.println(this.vistaPrincipal.GrupoSize.getSelection().getActionCommand());
+                    
                 }
                 break;
             case Latte:
@@ -237,13 +249,12 @@ public class Maquina implements ActionListener,MouseListener {
                     JOptionPane.showMessageDialog(null,"Debe ingresar más dinero para adquirir el producto");
                 }
                 else{
-                    this.vistaPrincipal.LecheE1.setSelected(true);
-                    this.vistaPrincipal.SizeS.setSelected(true);
-                    this.vistaPrincipal.SAzucar.setSelected(true);
-                    ValFinal = ValFinal +1300;
-                    this.vistaPrincipal.txtValor.setText(Integer.toString(ValFinal));
-                    this.vistaPrincipal.txtVuelto.setText("$"+Integer.toString(Integer.parseInt(this.vistaPrincipal.txtImporte.getText())-ValFinal));
+                    
                     this.vistaPrincipal.btnPreparar.setEnabled(true);
+                    this.vistaPrincipal.GrupoAzucar.getSelection().getActionCommand();
+                    this.vistaPrincipal.GrupoBebida.getSelection().getActionCommand();
+                    this.vistaPrincipal.GrupoLeche.getSelection().getActionCommand();
+                    this.vistaPrincipal.GrupoSize.getSelection().getActionCommand();
                 }
                 break;
             case Capuchino:
@@ -255,13 +266,12 @@ public class Maquina implements ActionListener,MouseListener {
                     JOptionPane.showMessageDialog(null,"Debe ingresar más dinero para adquirir el producto");
                 }
                 else{
-                    this.vistaPrincipal.LecheE1.setSelected(true);
-                    this.vistaPrincipal.SizeS.setSelected(true);
-                    this.vistaPrincipal.SAzucar.setSelected(true);
-                    ValFinal = ValFinal +1000;
-                    this.vistaPrincipal.txtValor.setText(Integer.toString(ValFinal));
-                    this.vistaPrincipal.txtVuelto.setText("$"+Integer.toString(Integer.parseInt(this.vistaPrincipal.txtImporte.getText())-ValFinal));
+                    
                     this.vistaPrincipal.btnPreparar.setEnabled(true);
+                    this.vistaPrincipal.GrupoAzucar.getSelection().getActionCommand();
+                    this.vistaPrincipal.GrupoBebida.getSelection().getActionCommand();
+                    this.vistaPrincipal.GrupoLeche.getSelection().getActionCommand();
+                    this.vistaPrincipal.GrupoSize.getSelection().getActionCommand();
                 }
                 break;
             case Moka:
@@ -273,13 +283,12 @@ public class Maquina implements ActionListener,MouseListener {
                     JOptionPane.showMessageDialog(null,"Debe ingresar más dinero para adquirir el producto");
                 }
                 else{
-                    this.vistaPrincipal.rdbSLeche.setSelected(true);
-                    this.vistaPrincipal.SizeS.setSelected(true);
-                    this.vistaPrincipal.SAzucar.setSelected(true);
-                    ValFinal = ValFinal +1500;
-                    this.vistaPrincipal.txtValor.setText(Integer.toString(ValFinal));
-                    this.vistaPrincipal.txtVuelto.setText("$"+Integer.toString(Integer.parseInt(this.vistaPrincipal.txtImporte.getText())-ValFinal));
+                   
                     this.vistaPrincipal.btnPreparar.setEnabled(true);
+                    this.vistaPrincipal.GrupoAzucar.getSelection().getActionCommand();
+                    this.vistaPrincipal.GrupoBebida.getSelection().getActionCommand();
+                    this.vistaPrincipal.GrupoLeche.getSelection().getActionCommand();
+                    this.vistaPrincipal.GrupoSize.getSelection().getActionCommand();
                 }
                 break;
             case HotChoc:
@@ -292,13 +301,12 @@ public class Maquina implements ActionListener,MouseListener {
                 }
                 
                 else{
-                    this.vistaPrincipal.rdbSLeche.setSelected(true);
-                    this.vistaPrincipal.SizeS.setSelected(true);
-                    this.vistaPrincipal.SAzucar.setSelected(true);
-                    ValFinal = ValFinal +800;
-                    this.vistaPrincipal.txtValor.setText(Integer.toString(ValFinal));
-                    this.vistaPrincipal.txtVuelto.setText("$"+Integer.toString(Integer.parseInt(this.vistaPrincipal.txtImporte.getText())-800));
+                    
                     this.vistaPrincipal.btnPreparar.setEnabled(true);
+                    this.vistaPrincipal.GrupoAzucar.getSelection().getActionCommand();
+                    this.vistaPrincipal.GrupoBebida.getSelection().getActionCommand();
+                    this.vistaPrincipal.GrupoLeche.getSelection().getActionCommand();
+                    this.vistaPrincipal.GrupoSize.getSelection().getActionCommand();
                 }
                 break;
             case SizeS:
@@ -357,6 +365,13 @@ public class Maquina implements ActionListener,MouseListener {
                 this.vistaPrincipal.txtValor.setText(Integer.toString(ValFinal));
                 break;
        }
+        
+        
+        
+        
+        
+        
+        
     }
 
     @Override
