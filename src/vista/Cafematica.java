@@ -23,6 +23,7 @@ public class Cafematica extends javax.swing.JFrame {
      */
     public Cafematica() {
         initComponents();
+        btnPreparar.setEnabled(false);
     }
 
     /**

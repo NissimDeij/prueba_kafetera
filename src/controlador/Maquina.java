@@ -50,7 +50,19 @@ public class Maquina implements ActionListener,MouseListener {
         //Radiobutton de tipo de Azucar
         SAzucar,
         CAzucar,
-        EAzucar
+        EAzucar,
+        //Botones de precio
+        btn50,
+        btn100,
+        btn500,
+        btn1000,
+        btn2000,
+        btn5000,
+        btn10000,
+        btn20000,
+        //Textbox de monto
+        txtValor,
+        txtVuelto
     }
     
     /** Inicia todos las acciones y listener de la vista */
@@ -116,12 +128,126 @@ public class Maquina implements ActionListener,MouseListener {
         
         this.vistaPrincipal.EAzucar.setActionCommand("EAzucar");
         this.vistaPrincipal.EAzucar.addActionListener(this);
+        
+        //Escuchamos textbox
+        this.vistaPrincipal.txtValor.setActionCommand("txtValor");
+        this.vistaPrincipal.txtValor.addActionListener(this);
+        
+        this.vistaPrincipal.txtVuelto.setActionCommand("txtVuelto");
+        this.vistaPrincipal.txtVuelto.addActionListener(this);
+        
+        //Escuchamos botones de monto
+        this.vistaPrincipal.btn50.setActionCommand("btn50");
+        this.vistaPrincipal.btn50.addActionListener(this);
+        
+        this.vistaPrincipal.btn100.setActionCommand("btn100");
+        this.vistaPrincipal.btn100.addActionListener(this);
+        
+        this.vistaPrincipal.btn500.setActionCommand("btn500");
+        this.vistaPrincipal.btn500.addActionListener(this);
+        
+        this.vistaPrincipal.btn1000.setActionCommand("btn1000");
+        this.vistaPrincipal.btn1000.addActionListener(this);
+        
+        this.vistaPrincipal.btn2000.setActionCommand("btn2000");
+        this.vistaPrincipal.btn2000.addActionListener(this);
+        
+        this.vistaPrincipal.btn5000.setActionCommand("btn5000");
+        this.vistaPrincipal.btn5000.addActionListener(this);
+        
+        this.vistaPrincipal.btn10000.setActionCommand("btn10000");
+        this.vistaPrincipal.btn10000.addActionListener(this);
+        
+        this.vistaPrincipal.btn20000.setActionCommand("btn20000");
+        this.vistaPrincipal.btn20000.addActionListener(this);
 
 
     }
+    
+      int monto=0;
     @Override
     public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+      
+        switch ( Accion.valueOf( e.getActionCommand() ) )
+        {
+            case  btn50:
+                monto = monto + 50;
+                System.out.println(monto);
+                break;
+            case  btn100:
+                monto = monto + 100;
+                System.out.println(monto);
+                break;
+            case  btn500:
+                monto = monto + 500;
+                System.out.println(monto);
+                break;
+            case  btn1000:
+                monto = monto + 1000;
+                System.out.println(monto);
+                break;
+            case  btn2000:
+                monto = monto + 2000;
+                System.out.println(monto);
+                break;
+            case  btn5000:
+                monto = monto + 5000;
+                System.out.println(monto);
+                break;
+            case  btn10000:
+                monto = monto + 10000;
+                System.out.println(monto);
+                break;
+            case  btn20000:
+                monto = monto + 2000;
+                System.out.println(monto);
+                break;
+            case Expresso:
+                if (monto <= 0){
+                    JOptionPane.showMessageDialog(null,"Debe seleccionar monto previamente");
+                }
+                else{
+                    this.vistaPrincipal.txtValor.setText("$900");
+                    this.vistaPrincipal.btnPreparar.setEnabled(true);
+                }
+                break;
+            case Latte:
+                if (monto <= 0){
+                    JOptionPane.showMessageDialog(null,"Debe seleccionar monto previamente");
+                }
+                else{
+                    this.vistaPrincipal.txtValor.setText("$1300");
+                    this.vistaPrincipal.btnPreparar.setEnabled(true);
+                }
+                break;
+            case Capuchino:
+                if (monto <= 0){
+                    JOptionPane.showMessageDialog(null,"Debe seleccionar monto previamente");
+                }
+                else{
+                    this.vistaPrincipal.txtValor.setText("$1000");
+                    this.vistaPrincipal.btnPreparar.setEnabled(true);
+                }
+                break;
+            case Moka:
+                if (monto <= 0){
+                    JOptionPane.showMessageDialog(null,"Debe seleccionar monto previamente");
+                }
+                else{
+                    this.vistaPrincipal.txtValor.setText("$1500");
+                    this.vistaPrincipal.btnPreparar.setEnabled(true);
+                }
+                break;
+            case HotChoc:
+                if (monto <= 0){
+                    JOptionPane.showMessageDialog(null,"Debe seleccionar monto previamente");
+                }
+                else{
+                    this.vistaPrincipal.txtValor.setText("$800");
+                    this.vistaPrincipal.btnPreparar.setEnabled(true);
+                }
+                break;
+       }
     }
 
     @Override
