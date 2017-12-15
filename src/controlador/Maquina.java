@@ -62,7 +62,8 @@ public class Maquina implements ActionListener,MouseListener {
         btn20000,
         //Textbox de monto
         txtValor,
-        txtVuelto
+        txtVuelto,
+        txtImporte
     }
     
     /** Inicia todos las acciones y listener de la vista */
@@ -134,6 +135,9 @@ public class Maquina implements ActionListener,MouseListener {
         this.vistaPrincipal.txtVuelto.setActionCommand("txtVuelto");
         this.vistaPrincipal.txtVuelto.addActionListener(this);
         
+        this.vistaPrincipal.txtImporte.setActionCommand("txtImporte");
+        this.vistaPrincipal.txtImporte.addActionListener(this);
+        
         //Escuchamos botones de monto
         this.vistaPrincipal.btn50.setActionCommand("btn50");
         this.vistaPrincipal.btn50.addActionListener(this);
@@ -170,42 +174,46 @@ public class Maquina implements ActionListener,MouseListener {
         {
             case  btn50:
                 monto = monto + 50;
-                System.out.println(monto);
+                this.vistaPrincipal.txtImporte.setText(Integer.toString(monto));
                 break;
             case  btn100:
                 monto = monto + 100;
-                System.out.println(monto);
+                this.vistaPrincipal.txtImporte.setText(Integer.toString(monto));
                 break;
             case  btn500:
                 monto = monto + 500;
-                System.out.println(monto);
+                this.vistaPrincipal.txtImporte.setText(Integer.toString(monto));
                 break;
             case  btn1000:
                 monto = monto + 1000;
-                System.out.println(monto);
+                this.vistaPrincipal.txtImporte.setText(Integer.toString(monto));
                 break;
             case  btn2000:
                 monto = monto + 2000;
-                System.out.println(monto);
+                this.vistaPrincipal.txtImporte.setText(Integer.toString(monto));
                 break;
             case  btn5000:
                 monto = monto + 5000;
-                System.out.println(monto);
+                this.vistaPrincipal.txtImporte.setText(Integer.toString(monto));
                 break;
             case  btn10000:
                 monto = monto + 10000;
-                System.out.println(monto);
+                this.vistaPrincipal.txtImporte.setText(Integer.toString(monto));
                 break;
             case  btn20000:
-                monto = monto + 2000;
-                System.out.println(monto);
+                monto = monto + 20000;
+                this.vistaPrincipal.txtImporte.setText(Integer.toString(monto));
                 break;
             case Expresso:
                 if (monto <= 0){
                     JOptionPane.showMessageDialog(null,"Debe seleccionar monto previamente");
                 }
-                else{
+                else if(Integer.parseInt(this.vistaPrincipal.txtImporte.getText()) < 900){
+                    JOptionPane.showMessageDialog(null,"Debe ingresar más dinero para adquirir el producto");
+                }
+                else {
                     this.vistaPrincipal.txtValor.setText("$900");
+                    this.vistaPrincipal.txtVuelto.setText("$"+Integer.toString(Integer.parseInt(this.vistaPrincipal.txtImporte.getText())-900));
                     this.vistaPrincipal.btnPreparar.setEnabled(true);
                 }
                 break;
@@ -213,8 +221,13 @@ public class Maquina implements ActionListener,MouseListener {
                 if (monto <= 0){
                     JOptionPane.showMessageDialog(null,"Debe seleccionar monto previamente");
                 }
+                
+                else if(Integer.parseInt(this.vistaPrincipal.txtImporte.getText()) < 1300){
+                    JOptionPane.showMessageDialog(null,"Debe ingresar más dinero para adquirir el producto");
+                }
                 else{
                     this.vistaPrincipal.txtValor.setText("$1300");
+                    this.vistaPrincipal.txtVuelto.setText("$"+Integer.toString(Integer.parseInt(this.vistaPrincipal.txtImporte.getText())-1300));
                     this.vistaPrincipal.btnPreparar.setEnabled(true);
                 }
                 break;
@@ -222,8 +235,13 @@ public class Maquina implements ActionListener,MouseListener {
                 if (monto <= 0){
                     JOptionPane.showMessageDialog(null,"Debe seleccionar monto previamente");
                 }
+                
+                else if(Integer.parseInt(this.vistaPrincipal.txtImporte.getText()) < 1000){
+                    JOptionPane.showMessageDialog(null,"Debe ingresar más dinero para adquirir el producto");
+                }
                 else{
                     this.vistaPrincipal.txtValor.setText("$1000");
+                    this.vistaPrincipal.txtVuelto.setText("$"+Integer.toString(Integer.parseInt(this.vistaPrincipal.txtImporte.getText())-1000));
                     this.vistaPrincipal.btnPreparar.setEnabled(true);
                 }
                 break;
@@ -231,8 +249,13 @@ public class Maquina implements ActionListener,MouseListener {
                 if (monto <= 0){
                     JOptionPane.showMessageDialog(null,"Debe seleccionar monto previamente");
                 }
+                
+                else if(Integer.parseInt(this.vistaPrincipal.txtImporte.getText()) < 1500){
+                    JOptionPane.showMessageDialog(null,"Debe ingresar más dinero para adquirir el producto");
+                }
                 else{
                     this.vistaPrincipal.txtValor.setText("$1500");
+                    this.vistaPrincipal.txtVuelto.setText("$"+Integer.toString(Integer.parseInt(this.vistaPrincipal.txtImporte.getText())-1500));
                     this.vistaPrincipal.btnPreparar.setEnabled(true);
                 }
                 break;
@@ -240,8 +263,14 @@ public class Maquina implements ActionListener,MouseListener {
                 if (monto <= 0){
                     JOptionPane.showMessageDialog(null,"Debe seleccionar monto previamente");
                 }
+                
+                else if(Integer.parseInt(this.vistaPrincipal.txtImporte.getText()) < 800){
+                    JOptionPane.showMessageDialog(null,"Debe ingresar más dinero para adquirir el producto");
+                }
+                
                 else{
                     this.vistaPrincipal.txtValor.setText("$800");
+                    this.vistaPrincipal.txtVuelto.setText("$"+Integer.toString(Integer.parseInt(this.vistaPrincipal.txtImporte.getText())-800));
                     this.vistaPrincipal.btnPreparar.setEnabled(true);
                 }
                 break;

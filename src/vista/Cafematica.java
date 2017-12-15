@@ -24,6 +24,7 @@ public class Cafematica extends javax.swing.JFrame {
     public Cafematica() {
         initComponents();
         btnPreparar.setEnabled(false);
+        txtImporte.setEnabled(false);
     }
 
     /**
@@ -94,6 +95,9 @@ public class Cafematica extends javax.swing.JFrame {
         btn5000 = new javax.swing.JButton();
         btn10000 = new javax.swing.JButton();
         btn20000 = new javax.swing.JButton();
+        lblMoneda = new javax.swing.JLabel();
+        lblImporte1 = new javax.swing.JLabel();
+        txtImporte = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -192,7 +196,7 @@ public class Cafematica extends javax.swing.JFrame {
                     .addComponent(Latte)
                     .addComponent(Expresso)
                     .addComponent(jLabel2))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(10, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -669,6 +673,12 @@ public class Cafematica extends javax.swing.JFrame {
 
         btn20000.setText("20000");
 
+        lblMoneda.setFont(new java.awt.Font("Microsoft New Tai Lue", 0, 12)); // NOI18N
+        lblMoneda.setText("Ingrese monedas o billetes:");
+
+        lblImporte1.setFont(new java.awt.Font("Microsoft New Tai Lue", 0, 12)); // NOI18N
+        lblImporte1.setText("Importe ingresado");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -687,23 +697,35 @@ public class Cafematica extends javax.swing.JFrame {
                                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(btn50)
-                                .addGap(18, 18, 18)
-                                .addComponent(btn100)
-                                .addGap(18, 18, 18)
-                                .addComponent(btn500)
-                                .addGap(18, 18, 18)
-                                .addComponent(btn1000)
-                                .addGap(18, 18, 18)
-                                .addComponent(btn2000)
-                                .addGap(18, 18, 18)
-                                .addComponent(btn5000)
-                                .addGap(18, 18, 18)
-                                .addComponent(btn10000)
-                                .addGap(18, 18, 18)
-                                .addComponent(btn20000))
-                            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(9, 9, 9)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel1Layout.createSequentialGroup()
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addComponent(btn50)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(btn100))
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGap(10, 10, 10)
+                                                .addComponent(lblImporte1)))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addComponent(btn500)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(btn1000)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(btn2000)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(btn5000)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(btn10000)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(btn20000))
+                                            .addComponent(txtImporte, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(lblMoneda))))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
@@ -723,6 +745,8 @@ public class Cafematica extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(lblMoneda)
+                        .addGap(2, 2, 2)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(btn50)
                             .addComponent(btn100)
@@ -732,7 +756,11 @@ public class Cafematica extends javax.swing.JFrame {
                             .addComponent(btn5000)
                             .addComponent(btn10000)
                             .addComponent(btn20000))
-                        .addGap(32, 32, 32)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblImporte1)
+                            .addComponent(txtImporte, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -944,6 +972,9 @@ public class Cafematica extends javax.swing.JFrame {
     public javax.swing.JPanel jPanel5;
     public javax.swing.JPanel jPanel6;
     public javax.swing.JPanel jPanel7;
+    public javax.swing.JLabel lblImporte1;
+    public javax.swing.JLabel lblMoneda;
+    public javax.swing.JTextField txtImporte;
     public javax.swing.JTextField txtValor;
     public javax.swing.JTextField txtVuelto;
     // End of variables declaration//GEN-END:variables
