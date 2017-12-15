@@ -5,11 +5,7 @@
  */
 package vista;
 
-import modelo.Capuccino;
-import modelo.Expresso;
-import modelo.Latte;
-import controlador.Maquina;
-import modelo.Moka;
+import modelo.Modelo;
 import java.awt.Color;
 import java.util.Enumeration;
 import javax.swing.ButtonGroup;
@@ -82,17 +78,21 @@ public class Cafematica extends javax.swing.JFrame {
         jTextField1 = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         SeleccionLbl = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
         jPanel7 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         SizeM = new javax.swing.JRadioButton();
         SizeS = new javax.swing.JRadioButton();
         SizeL = new javax.swing.JRadioButton();
-        TUCafe = new javax.swing.JButton();
-        TULecheE = new javax.swing.JButton();
-        TULecheD = new javax.swing.JButton();
-        TULecheS = new javax.swing.JButton();
-        TUChoc = new javax.swing.JButton();
-        TUAzucar = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
+        jButton8 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -208,7 +208,7 @@ public class Cafematica extends javax.swing.JFrame {
                 .addComponent(Moka)
                 .addGap(18, 18, 18)
                 .addComponent(HotChoc)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(35, Short.MAX_VALUE))
         );
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
@@ -427,7 +427,7 @@ public class Cafematica extends javax.swing.JFrame {
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(58, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(PBCafe, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -444,21 +444,21 @@ public class Cafematica extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(PBLecheS, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel13))
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel13)
+                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(PBChoc, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(PBAzucar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+                    .addComponent(PBAzucar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(41, 41, 41))
         );
         jPanel5Layout.setVerticalGroup(
@@ -486,18 +486,17 @@ public class Cafematica extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap())
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
         );
 
         Preparar.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 18)); // NOI18N
@@ -528,6 +527,18 @@ public class Cafematica extends javax.swing.JFrame {
         SeleccionLbl.setFont(new java.awt.Font("Microsoft Tai Le", 1, 16)); // NOI18N
         SeleccionLbl.setForeground(new java.awt.Color(51, 51, 255));
 
+        jLabel16.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 14)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel16.setText("Vuelto");
+
+        jTextField2.setEditable(false);
+        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField2.setFont(new java.awt.Font("Microsoft New Tai Lue", 1, 24)); // NOI18N
+        jTextField2.setForeground(new java.awt.Color(255, 0, 0));
+        jTextField2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField2.setText("$1,200");
+        jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
@@ -535,24 +546,33 @@ public class Cafematica extends javax.swing.JFrame {
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(SeleccionLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                            .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(SeleccionLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addGap(7, 7, 7)
-                .addComponent(SeleccionLbl, javax.swing.GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(27, 27, 27)
                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41))
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(SeleccionLbl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(186, 186, 186))
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(98, 98, 98)
+                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(56, Short.MAX_VALUE))))
         );
 
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
@@ -630,59 +650,26 @@ public class Cafematica extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        TUCafe.setFont(new java.awt.Font("Arial Black", 1, 20)); // NOI18N
-        TUCafe.setForeground(new java.awt.Color(204, 0, 0));
-        TUCafe.setText("<html>&uarr</html>");
-        TUCafe.addActionListener(new java.awt.event.ActionListener() {
+        jButton1.setText("50");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TUCafeActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
 
-        TULecheE.setFont(new java.awt.Font("Arial Black", 1, 20)); // NOI18N
-        TULecheE.setForeground(new java.awt.Color(204, 0, 0));
-        TULecheE.setText("<html>&uarr</html>");
-        TULecheE.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TULecheEActionPerformed(evt);
-            }
-        });
+        jButton2.setText("100");
 
-        TULecheD.setFont(new java.awt.Font("Arial Black", 1, 20)); // NOI18N
-        TULecheD.setForeground(new java.awt.Color(204, 0, 0));
-        TULecheD.setText("<html>&uarr</html>");
-        TULecheD.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TULecheDActionPerformed(evt);
-            }
-        });
+        jButton3.setText("500");
 
-        TULecheS.setFont(new java.awt.Font("Arial Black", 1, 20)); // NOI18N
-        TULecheS.setForeground(new java.awt.Color(204, 0, 0));
-        TULecheS.setText("<html>&uarr</html>");
-        TULecheS.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TULecheSActionPerformed(evt);
-            }
-        });
+        jButton4.setText("1000");
 
-        TUChoc.setFont(new java.awt.Font("Arial Black", 1, 20)); // NOI18N
-        TUChoc.setForeground(new java.awt.Color(204, 0, 0));
-        TUChoc.setText("<html>&uarr</html>");
-        TUChoc.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TUChocActionPerformed(evt);
-            }
-        });
+        jButton5.setText("2000");
 
-        TUAzucar.setFont(new java.awt.Font("Arial Black", 1, 20)); // NOI18N
-        TUAzucar.setForeground(new java.awt.Color(204, 0, 0));
-        TUAzucar.setText("<html>&uarr</html>");
-        TUAzucar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TUAzucarActionPerformed(evt);
-            }
-        });
+        jButton6.setText("5000");
+
+        jButton7.setText("10000");
+
+        jButton8.setText("20000");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -694,37 +681,40 @@ public class Cafematica extends javax.swing.JFrame {
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(24, 24, 24)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 595, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(81, 81, 81))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addGap(18, 18, 18)))
+                                    .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jButton1)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton2)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton3)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton4)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton5)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton6)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton7)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton8))
+                            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Preparar, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(107, 107, 107)
+                                .addComponent(Preparar, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(65, 65, 65)
-                .addComponent(TUCafe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
-                .addComponent(TULecheE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54)
-                .addComponent(TULecheD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(60, 60, 60)
-                .addComponent(TULecheS, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(56, 56, 56)
-                .addComponent(TUChoc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(53, 53, 53)
-                .addComponent(TUAzucar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -732,41 +722,41 @@ public class Cafematica extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(Preparar))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton1)
+                            .addComponent(jButton2)
+                            .addComponent(jButton3)
+                            .addComponent(jButton4)
+                            .addComponent(jButton5)
+                            .addComponent(jButton6)
+                            .addComponent(jButton7)
+                            .addComponent(jButton8))
+                        .addGap(32, 32, 32)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(46, 46, 46)
-                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(TUCafe, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TULecheE, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TULecheD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TULecheS, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TUChoc, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TUAzucar, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(18, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(Preparar, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -785,121 +775,77 @@ public class Cafematica extends javax.swing.JFrame {
     }//GEN-LAST:event_EAzucarActionPerformed
 
     private void PrepararActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PrepararActionPerformed
-        switch (GetSelectedInt(GrupoBebida)){
-            case 1://Expreso
-                Expresso exp = new Expresso(GetSelectedInt(GrupoSize), GetSelectedInt(GrupoAzucar));
-                break;
-            case 2://Latte
-                Latte lat = new Latte(GetSelectedInt(GrupoSize), GetSelectedInt(GrupoLeche), GetSelectedInt(GrupoAzucar));
-                break;
-            case 3://Capuchino
-                Capuccino cap = new Capuccino(GetSelectedInt(GrupoSize), GetSelectedInt(GrupoLeche), GetSelectedInt(GrupoAzucar));
-                break;
-            case 4://Moka
-                Moka mok = new Moka(GetSelectedInt(GrupoSize), GetSelectedInt(GrupoLeche), GetSelectedInt(GrupoAzucar));
-                break;
-            case 5://Chocolate Caliente
-                break;
-            
-        }
-        ActProgBar();
+        
     }//GEN-LAST:event_PrepararActionPerformed
 
     private void ExpressoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExpressoMouseClicked
-        UpdateSelectionLbl();
+       
     }//GEN-LAST:event_ExpressoMouseClicked
 
     private void LatteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LatteMouseClicked
-        UpdateSelectionLbl();
+       
     }//GEN-LAST:event_LatteMouseClicked
 
     private void CapuchinoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CapuchinoMouseClicked
-        UpdateSelectionLbl();
+        
     }//GEN-LAST:event_CapuchinoMouseClicked
 
     private void MokaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MokaMouseClicked
-        UpdateSelectionLbl();
+       
     }//GEN-LAST:event_MokaMouseClicked
 
     private void HotChocMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HotChocMouseClicked
-        UpdateSelectionLbl();
+       
     }//GEN-LAST:event_HotChocMouseClicked
 
     private void LecheEMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LecheEMouseClicked
-        UpdateSelectionLbl();
+       
     }//GEN-LAST:event_LecheEMouseClicked
 
     private void LecheDMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LecheDMouseClicked
-        UpdateSelectionLbl();
+        
     }//GEN-LAST:event_LecheDMouseClicked
 
     private void LecheSMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LecheSMouseClicked
-        UpdateSelectionLbl();
+        
     }//GEN-LAST:event_LecheSMouseClicked
 
     private void SAzucarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SAzucarMouseClicked
-        UpdateSelectionLbl();
+       
     }//GEN-LAST:event_SAzucarMouseClicked
 
     private void CAzucarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CAzucarMouseClicked
-        UpdateSelectionLbl();
+    
     }//GEN-LAST:event_CAzucarMouseClicked
 
     private void EAzucarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_EAzucarMouseClicked
-        UpdateSelectionLbl();
+       
     }//GEN-LAST:event_EAzucarMouseClicked
 
     private void SizeMMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SizeMMouseClicked
-        UpdateSelectionLbl();
+   
     }//GEN-LAST:event_SizeMMouseClicked
 
     private void SizeSMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SizeSMouseClicked
-        UpdateSelectionLbl();
+    
     }//GEN-LAST:event_SizeSMouseClicked
 
     private void SizeLMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SizeLMouseClicked
-        UpdateSelectionLbl();
+    
     }//GEN-LAST:event_SizeLMouseClicked
 
     private void SizeSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SizeSActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_SizeSActionPerformed
 
-    private void TUCafeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TUCafeActionPerformed
-        PBCafe.setValue(100);
-        Maquina.stockDisponible()[0] = Maquina.maxCafe;
-        PBCafe.setForeground(Color.GRAY);
-    }//GEN-LAST:event_TUCafeActionPerformed
-
-    private void TULecheEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TULecheEActionPerformed
-        PBLecheE.setValue(100);
-        PBLecheE.setForeground(Color.GRAY);
-    }//GEN-LAST:event_TULecheEActionPerformed
-
-    private void TULecheDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TULecheDActionPerformed
-        PBLecheD.setValue(100);
-        PBLecheD.setForeground(Color.GRAY);
-    }//GEN-LAST:event_TULecheDActionPerformed
-
-    private void TULecheSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TULecheSActionPerformed
-        PBLecheS.setValue(100);
-        PBLecheS.setForeground(Color.GRAY);
-    }//GEN-LAST:event_TULecheSActionPerformed
-
-    private void TUChocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TUChocActionPerformed
-        PBChoc.setValue(100);
-        PBChoc.setForeground(Color.GRAY);
-    }//GEN-LAST:event_TUChocActionPerformed
-
-    private void TUAzucarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TUAzucarActionPerformed
-        PBAzucar.setValue(100);
-        PBAzucar.setForeground(Color.GRAY);
-    }//GEN-LAST:event_TUAzucarActionPerformed
-
     private void LatteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LatteActionPerformed
         // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "Hola");
+       
     }//GEN-LAST:event_LatteActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -936,68 +882,11 @@ public class Cafematica extends javax.swing.JFrame {
         });
     }
     
-    public String GetSelected(ButtonGroup buttonGroup){
-        //jPanel3.enable(true);
-        for (Enumeration<AbstractButton> buttons = buttonGroup.getElements(); buttons.hasMoreElements();) {
-            AbstractButton button = buttons.nextElement();
-            if (button.isSelected()) {
-                return button.getText();
-            }
-        }
-        return null;
-    }
     
-    public int GetSelectedInt(ButtonGroup buttonGroup){
-        //jPanel3.enable(true);
-        for (Enumeration<AbstractButton> buttons = buttonGroup.getElements(); buttons.hasMoreElements();) {
-            AbstractButton button = buttons.nextElement();
-            if (button.isSelected()) {
-                return Integer.parseInt(button.getActionCommand());
-            }
-        }
-        return -1;
-    }
     
-    public void UpdateSelectionLbl(){
-        if (GetSelected(GrupoBebida)!=null){
-            if (GetSelected(GrupoLeche)==null){
-                LecheE.setSelected(true);
-            }
-            if (GetSelected(GrupoAzucar)==null){
-                SAzucar.setSelected(true);
-            }
-            if (GetSelected(GrupoSize)==null){
-                SizeS.setSelected(true);
-            }
-            SeleccionLbl.setText("<html>Tipo de bebida:<BR>" + GetSelected(GrupoBebida) + "<br><br>Tamaño:<BR>" + GetSelected(GrupoSize) + "<br><br>Tipo de leche:<BR>" + GetSelected(GrupoLeche) + "<br><br>Azucar:<BR>" + GetSelected(GrupoAzucar) + "</html>");        
-        }
-    }
     
-    public void ActProgBar(){
-        int[] AuxArr = Maquina.stockDisponible();//new int[6];
-        Color[] AuxArr2 = new Color[6];//new int[6];
-        PBCafe.setValue(AuxArr[0]);
-        PBLecheE.setValue(AuxArr[1]);
-        PBLecheD.setValue(AuxArr[2]);
-        PBLecheS.setValue(AuxArr[3]);
-        PBChoc.setValue(AuxArr[4]);
-        PBAzucar.setValue(AuxArr[5]);
-        
-        boolean[] alSt = Maquina.alertaStock();
-        for(int i=0; i<6; i++){
-            if (alSt[i]==true){
-                AuxArr2[i] = Color.RED;
-            }else{
-                AuxArr2[i] = Color.GRAY;
-            }
-        }
-        PBCafe.setForeground(AuxArr2[0]);
-        PBLecheE.setForeground(AuxArr2[1]);
-        PBLecheD.setForeground(AuxArr2[2]);
-        PBLecheS.setForeground(AuxArr2[3]);
-        PBChoc.setForeground(AuxArr2[4]);
-        PBAzucar.setForeground(AuxArr2[5]);
-    }
+    
+   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JRadioButton CAzucar;
@@ -1026,12 +915,14 @@ public class Cafematica extends javax.swing.JFrame {
     public javax.swing.JRadioButton SizeL;
     public javax.swing.JRadioButton SizeM;
     public javax.swing.JRadioButton SizeS;
-    public javax.swing.JButton TUAzucar;
-    public javax.swing.JButton TUCafe;
-    public javax.swing.JButton TUChoc;
-    public javax.swing.JButton TULecheD;
-    public javax.swing.JButton TULecheE;
-    public javax.swing.JButton TULecheS;
+    public javax.swing.JButton jButton1;
+    public javax.swing.JButton jButton2;
+    public javax.swing.JButton jButton3;
+    public javax.swing.JButton jButton4;
+    public javax.swing.JButton jButton5;
+    public javax.swing.JButton jButton6;
+    public javax.swing.JButton jButton7;
+    public javax.swing.JButton jButton8;
     public javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1039,6 +930,7 @@ public class Cafematica extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -1055,5 +947,6 @@ public class Cafematica extends javax.swing.JFrame {
     public javax.swing.JPanel jPanel6;
     public javax.swing.JPanel jPanel7;
     public javax.swing.JTextField jTextField1;
+    public javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }
