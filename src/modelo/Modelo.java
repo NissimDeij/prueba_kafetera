@@ -1,14 +1,18 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package modelo;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
+import sql.conexion;
 
-/**
- *
- * @author Duoc UC
- */
+
 public class Modelo {
+    
+    public boolean agregarRegistro(int codigo, String cafe, String tamaño, String leche, String azucar, int total, String fecha){
+        
+        
+    }
     
 }
