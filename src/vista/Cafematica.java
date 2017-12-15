@@ -85,14 +85,14 @@ public class Cafematica extends javax.swing.JFrame {
         SizeM = new javax.swing.JRadioButton();
         SizeS = new javax.swing.JRadioButton();
         SizeL = new javax.swing.JRadioButton();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
+        btn50 = new javax.swing.JButton();
+        btn100 = new javax.swing.JButton();
+        btn500 = new javax.swing.JButton();
+        btn1000 = new javax.swing.JButton();
+        btn2000 = new javax.swing.JButton();
+        btn5000 = new javax.swing.JButton();
+        btn10000 = new javax.swing.JButton();
+        btn20000 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -483,7 +483,6 @@ public class Cafematica extends javax.swing.JFrame {
                             .addComponent(PBLecheE, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(PBLecheS, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(PBLecheD, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel5Layout.createSequentialGroup()
                                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -650,26 +649,26 @@ public class Cafematica extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jButton1.setText("50");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btn50.setText("50");
+        btn50.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btn50ActionPerformed(evt);
             }
         });
 
-        jButton2.setText("100");
+        btn100.setText("100");
 
-        jButton3.setText("500");
+        btn500.setText("500");
 
-        jButton4.setText("1000");
+        btn1000.setText("1000");
 
-        jButton5.setText("2000");
+        btn2000.setText("2000");
 
-        jButton6.setText("5000");
+        btn5000.setText("5000");
 
-        jButton7.setText("10000");
+        btn10000.setText("10000");
 
-        jButton8.setText("20000");
+        btn20000.setText("20000");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -690,21 +689,21 @@ public class Cafematica extends javax.swing.JFrame {
                                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton1)
+                                .addComponent(btn50)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton2)
+                                .addComponent(btn100)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton3)
+                                .addComponent(btn500)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton4)
+                                .addComponent(btn1000)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton5)
+                                .addComponent(btn2000)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton6)
+                                .addComponent(btn5000)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton7)
+                                .addComponent(btn10000)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton8))
+                                .addComponent(btn20000))
                             .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -726,14 +725,14 @@ public class Cafematica extends javax.swing.JFrame {
                     .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton1)
-                            .addComponent(jButton2)
-                            .addComponent(jButton3)
-                            .addComponent(jButton4)
-                            .addComponent(jButton5)
-                            .addComponent(jButton6)
-                            .addComponent(jButton7)
-                            .addComponent(jButton8))
+                            .addComponent(btn50)
+                            .addComponent(btn100)
+                            .addComponent(btn500)
+                            .addComponent(btn1000)
+                            .addComponent(btn2000)
+                            .addComponent(btn5000)
+                            .addComponent(btn10000)
+                            .addComponent(btn20000))
                         .addGap(32, 32, 32)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -843,9 +842,9 @@ public class Cafematica extends javax.swing.JFrame {
        
     }//GEN-LAST:event_LatteActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btn50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn50ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btn50ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -915,14 +914,14 @@ public class Cafematica extends javax.swing.JFrame {
     public javax.swing.JRadioButton SizeL;
     public javax.swing.JRadioButton SizeM;
     public javax.swing.JRadioButton SizeS;
-    public javax.swing.JButton jButton1;
-    public javax.swing.JButton jButton2;
-    public javax.swing.JButton jButton3;
-    public javax.swing.JButton jButton4;
-    public javax.swing.JButton jButton5;
-    public javax.swing.JButton jButton6;
-    public javax.swing.JButton jButton7;
-    public javax.swing.JButton jButton8;
+    public javax.swing.JButton btn100;
+    public javax.swing.JButton btn1000;
+    public javax.swing.JButton btn10000;
+    public javax.swing.JButton btn2000;
+    public javax.swing.JButton btn20000;
+    public javax.swing.JButton btn50;
+    public javax.swing.JButton btn500;
+    public javax.swing.JButton btn5000;
     public javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
